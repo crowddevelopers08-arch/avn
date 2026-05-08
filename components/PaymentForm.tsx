@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { withImageKit } from "@/lib/imagekit";
 
 declare global {
   interface Window {
@@ -94,7 +95,7 @@ export default function PaymentForm() {
         order_id: order.id,
         name: "AVN Arogya - Consultation",
         description: "Ayurvedic Consultation for AVN",
-        image: "/AVN_Leaf_Logo.jpg",
+        image: withImageKit("/AVN_Leaf_Logo.jpg"),
         theme: {
           color: "#f05623"
         },

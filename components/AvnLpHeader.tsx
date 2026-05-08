@@ -1,13 +1,14 @@
 import Image from "next/image";
+import { withImageKit } from "@/lib/imagekit";
 
 export default function AvnLpHeader() {
   return (
-    <header className="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
+    <header className="fixed inset-x-0 top-0 z-[9999] border-b border-gray-100 bg-white shadow-sm">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-2 px-3 py-3 sm:px-6 lg:px-10 xl:px-14">
 
         <div className="flex items-center">
           <Image
-            src="/AVN-logo.png"
+            src="https://ik.imagekit.io/waseev72f/AVN-logo.png"
             alt="AVN Arogya Ayurvedic Hospital"
             width={320}
             height={64}
@@ -19,7 +20,7 @@ export default function AvnLpHeader() {
         <div className="flex items-center gap-2 sm:gap-5">
           <div className="flex flex-col items-center">
             <Image
-              src="/nabh.png"
+              src={withImageKit("/nabh.png")}
               alt="NABH Accredited"
               width={70}
               height={70}
@@ -33,7 +34,7 @@ export default function AvnLpHeader() {
 
           <a
             href="tel:+918047091234"
-            className="flex h-10 w-10 items-center justify-center rounded-md bg-[#D94E1A] text-white shadow-sm transition-colors hover:bg-[#bf4215] sm:h-auto sm:w-auto sm:gap-2 sm:px-5 sm:py-3 sm:text-[15px]"
+            className="flex h-10 w-10 items-center justify-center rounded-md bg-[#D94E1A] text-white shadow-sm transition-colors hover:bg-[#80c141] sm:h-auto sm:w-auto sm:gap-2 sm:px-5 sm:py-3 sm:text-[15px]"
             aria-label="Call AVN Arogya"
           >
             <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">

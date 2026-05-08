@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
+import { withImageKit } from "@/lib/imagekit";
 
 const Neckfive = () => {
   const cardGridRef = useRef(null);
@@ -10,37 +11,37 @@ const Neckfive = () => {
       id: 1,
       title: "Cervical Spondylosis",
       description: "Age-related wear and tear of the cervical spine, causing stiffness, chronic neck pain, and restricted neck movement.",
-      image: "cerival.jpeg"
+      image: withImageKit("cerival.jpeg")
     },
     {
       id: 2,
       title: "Cervical Disc Issues / Radiculopathy (Pinched Nerve)",
       description: "Disc bulges or herniation pressing on spinal nerves, leading to radiating pain, tingling, and weakness in arms and shoulders.",
-      image: "cre.png"
+      image: "https://ik.imagekit.io/waseev72f/cre.png"
     },
     {
       id: 3,
       title: "Neck Strain / Postural Stiffness",
       description: "Prolonged screen use or poor posture causing muscle fatigue, stiffness, and limited neck flexibility.",
-      image: "Postural-strain.jpg"
+      image: withImageKit("Postural-strain.jpg")
     },
     {
       id: 4,
       title: "Frozen Shoulder (Adhesive Capsulitis)",
       description: "A condition where shoulder joint capsule becomes inflamed and stiff, severely limiting arm movement.",
-      image: "3D-Shoulde.jpg"
+      image: withImageKit("3D-Shoulde.jpg")
     },
     {
       id: 5,
       title: "Periarthritis Shoulder",
       description: "Localized inflammation around the shoulder joint, affecting movement and causing sharp pain with activity.",
-      image: "perthi.jpg"
+      image: withImageKit("perthi.jpg")
     },
     {
       id: 6,
       title: "Polyarthritis (Shoulder Involvement)",
       description: "Multiple joint inflammation, often involving both shoulders, causing deep-seated pain and restricted arm activity.",
-      image: "shoulderarth.jpg"
+      image: withImageKit("shoulderarth.jpg")
     }
   ];
 

@@ -6,6 +6,7 @@ import { Menu, X, Phone, Calendar, Shield, Star, Heart } from "lucide-react"
 import { BackconsultationModal } from "./backpopupform"
 import { KneeconsultationModal} from "./kneepopupform"
 import { LocationModal, useLocationModal } from "./calllocations"
+import { withImageKit } from "@/lib/imagekit"
 
 export function Kneehero() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -365,7 +366,7 @@ Tailored Ayurvedic Treatments That Heal, Strengthen & Restore Mobility, Naturall
               <div className="lg:hidden flex justify-center">
                 <div className="relative image-container">
                   <img 
-                    src="/Joint.jpg" 
+                    src={withImageKit("/Joint.jpg")} 
                     alt="AVN Arogya Ayurvedic Hospital - Knee Pain Treatment"
                     className="hero-image w-full h-auto"
                   />
@@ -429,7 +430,7 @@ Tailored Ayurvedic Treatments That Heal, Strengthen & Restore Mobility, Naturall
             <div className="hidden lg:flex justify-center lg:justify-end order-2 lg:order-2">
               <div className="relative image-container">
                 <img 
-                  src="/Joint.jpg" 
+                  src={withImageKit("/Joint.jpg")} 
                   alt="AVN Arogya Ayurvedic Hospital - Knee Pain Treatment"
                   className="hero-image w-full h-auto"
                 />

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { MapPin, Navigation, Car, X, Phone } from "lucide-react"
 import { FaWalking } from "react-icons/fa"
 import Image from "next/image";
+import { withImageKit } from "@/lib/imagekit";
 
 export default function ClinicLocationMap() {
   const mapContainerRef = useRef<HTMLDivElement>(null)
@@ -41,7 +42,7 @@ export default function ClinicLocationMap() {
     <div className="flex flex-col items-center text-center" style={{fontFamily: "'Outfit', sans-serif" }}>
         <div className="flex items-center gap-2 mb-1">
           <Image
-            src="logo.jpg" // Replace with your logo path
+            src={withImageKit("logo.jpg")}
             alt="Finesse Aesthetic Logo"
             width={500}
             height={200}

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { useLocationModal } from "@/components/calllocations"
 import Script from "next/script"
+import { withImageKit } from "@/lib/imagekit"
 
 const ZOHO_FORM_URL = "https://zcform.in/7xGlK"
 const ZOHO_BOOKINGS_URL = "https://avnarogya.zohobookings.in/#/69322000002683022"
@@ -118,7 +119,7 @@ const AvnctaSection = () => {
       <header className="w-full bg-white shadow-sm border-b border-gray-200">
         <div className="px-4 sm:px-6 md:px-12 lg:px-20 h-[72px] flex items-center justify-center gap-3 sm:gap-4">
           <Image
-            src="/AVN_Leaf_Logo.jpg"
+            src={withImageKit("/AVN_Leaf_Logo.jpg")}
             alt="AVN Arogya"
             width={40}
             height={40}

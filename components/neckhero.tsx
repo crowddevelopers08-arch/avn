@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Menu, X, Phone, Calendar, Shield, Star, Heart } from "lucide-react"
 import { NeckconsultationModal } from "./neckpopup"
 import { LocationModal, useLocationModal } from "./calllocations"
+import { withImageKit } from "@/lib/imagekit"
 
 export function Neckhero() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -158,7 +159,7 @@ export function Neckhero() {
         }
 
         .hero-background {
-          background-image: url('/neckbac.jpg');
+          background-image: url('${withImageKit("/neckbac.jpg")}');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;

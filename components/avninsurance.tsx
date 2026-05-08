@@ -43,7 +43,7 @@ const AvnInsurancePartners: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8 max-[470px]:mb-4 lg:mb-8">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#114520] mb-3 sm:mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-bold text-[#114520] mb-3 sm:mb-6 leading-tight">
             Insurance <span className="text-[#f05623] block sm:inline">& TPA Partners</span>
           </h1>
           

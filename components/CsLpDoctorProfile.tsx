@@ -2,39 +2,75 @@
 
 import Image from "next/image";
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import { withImageKit } from "@/lib/imagekit";
 
 interface Doctor {
   name: string;
   image: string;
   experience: string;
-  descriptions: string[];
+  title: string;
+  specialization: string;
+  description: string;
+  education: string;
+  achievements?: string;
   languages: string[];
 }
 
 const doctors: Doctor[] = [
   {
     name: "Dr. Ramesh R Varier",
-    image: "/Dr.Ramesh.jpg",
+    image: withImageKit("/Dr.Ramesh.jpg"),
     experience: "35+ Years",
-    descriptions: [
-      "Dr. Ramesh R Varier, our Managing Director and Senior Physician, graduated as 1st Rank Holder from Madras University in 1986. With over 35 years of mastery in musculoskeletal and spinal conditions, he offers unmatched expertise in cervical and spine care.",
-      "Dr. Varier is a pioneer in non-surgical Cervical Spondylosis treatment, delivering lasting relief from neck pain, nerve compression, and stiffness through proven Ayurvedic protocols and herbal formulations.",
-      "Discover holistic wellness with Dr. Varier, who optimizes your diet, lifestyle, and mind-body connection. Enjoy multilingual care with clear communication in English, Hindi, Tamil, and Malayalam for your utmost comfort.",
-    ],
+    title: "Managing Director and Senior Physician",
+    specialization: "Treatment of Musculoskeletal and Spinal Conditions",
+    description:
+      "Dr. Ramesh R Varier graduated as 1st Rank Holder from Madras University in 1986. With over 35 years of mastery in musculoskeletal and spinal conditions, he offers unmatched expertise in cervical and spine care.",
+    education:
+      "Pioneer in non-surgical Cervical Spondylosis treatment, delivering lasting relief from neck pain, nerve compression, and stiffness through proven Ayurvedic protocols and herbal formulations.",
+    achievements:
+      "Guides patients toward holistic wellness by optimizing diet, lifestyle, and mind-body balance with clear multilingual care.",
     languages: ["English", "Hindi", "Tamil", "Malayalam"],
+  },
+  {
+    name: "Dr. Sridevi Rajeev",
+    image: withImageKit("/doctwo.jpg"),
+    experience: "32 Years",
+    title: "Director and Chief Physician",
+    specialization: "Treatment of Musculoskeletal, Rheumatological and Developmental Disorders",
+    description:
+      "Dr. Sridevi Rajeev is a highly accomplished Ayurvedic physician with exceptional expertise in treating complex musculoskeletal and rheumatological conditions. Her compassionate approach and deep understanding of developmental disorders make her a trusted healer.",
+    education:
+      "B.A.M.S (1st Rank Holder from Mahatma Gandhi University). Fine-tuning Ayurvedic Therapies for personalized treatment protocols. Great listener and healer.",
+    achievements:
+      "Treated more than 3,500 IP patients with various conditions with high success rates.",
+    languages: ["English", "Tamil", "Malayalam", "Hindi"],
+  },
+  {
+    name: "Dr. Biju Madhavan",
+    image: withImageKit("/docthree.jpg"),
+    experience: "23 Years",
+    title: "Medical Superintendent",
+    specialization: "Treatment of Musculoskeletal and Neurological Disorders",
+    description:
+      "Dr. Biju Madhavan brings extensive expertise in integrating traditional Ayurvedic wisdom with modern medical diagnostics. His holistic approach to treating musculoskeletal and neurological disorders has helped numerous patients achieve optimal health.",
+    education:
+      "MD (Ayu) - integrates Ayurvedic treatment with modern diagnostics and therapeutic methods; a strong proponent of holistic healing.",
+    achievements:
+      "Treated more than 5,000 IP patients with various conditions with high success rates.",
+    languages: ["English", "Tamil", "Malayalam", "Hindi"],
   },
 ];
 
 const carouselImages = [
-  "/1-1.jpg",
-  "/1-2.jpg",
-  "/2-1.jpg",
-  "/2-2.jpg",
-  "/3-1.jpg",
-  "/3-2.jpg",
-  "/4-1.jpg",
-  "/5-1.jpg",
-  "/6-1.jpg",
+  withImageKit("/1-1.jpg"),
+  withImageKit("/1-2.jpg"),
+  withImageKit("/2-1.jpg"),
+  withImageKit("/2-2.jpg"),
+  withImageKit("/3-1.jpg"),
+  withImageKit("/3-2.jpg"),
+  withImageKit("/4-1.jpg"),
+  withImageKit("/5-1.jpg"),
+  withImageKit("/6-1.jpg"),
 ];
 
 const MOBILE_BREAKPOINT = 640;
@@ -124,22 +160,48 @@ const CsLpDoctorProfile = () => {
             <div className="flex flex-col gap-4 p-4 text-center sm:gap-5 sm:p-6 lg:w-3/5 lg:gap-6 lg:p-8 lg:text-left">
               <div>
                 <h2 className="mb-2 text-xl font-semibold text-[#014214] sm:text-2xl">
-                  Meet Our Doctor
+                  Meet Your Doctor
                 </h2>
                 <div className="mx-auto h-1 w-16 rounded bg-[#f05623] sm:w-20 lg:mx-0" />
               </div>
 
-              <h1 className="text-2xl font-bold leading-tight text-[#114520] sm:text-3xl">
-                {doctor.name}
-              </h1>
-
-              <div className="flex flex-col gap-3 sm:gap-4">
-                {doctor.descriptions.map((paragraph) => (
-                  <p key={paragraph} className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                    {paragraph}
-                  </p>
-                ))}
+              <div className="flex flex-col gap-2">
+                <h1 className="text-2xl font-bold leading-tight text-[#114520] sm:text-3xl">
+                  {doctor.name}
+                </h1>
+                <p className="text-lg font-semibold leading-snug text-[#80c141] sm:text-xl">
+                  {doctor.title}
+                </p>
+                <p className="text-base font-medium text-[#f05623] sm:text-lg">
+                  {doctor.specialization}
+                </p>
               </div>
+
+              <div>
+                <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
+                  {doctor.description}
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-2 text-lg font-semibold text-[#014214] sm:mb-3 sm:text-xl">
+                  Education & Expertise
+                </h3>
+                <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
+                  {doctor.education}
+                </p>
+              </div>
+
+              {doctor.achievements ? (
+                <div>
+                  <h3 className="mb-2 text-lg font-semibold text-[#014214] sm:mb-3 sm:text-xl">
+                    Achievements
+                  </h3>
+                  <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
+                    {doctor.achievements}
+                  </p>
+                </div>
+              ) : null}
 
               <div>
                 <h3 className="mb-3 text-lg font-semibold text-[#114520] sm:mb-4 sm:text-xl">
@@ -171,7 +233,7 @@ const CsLpDoctorProfile = () => {
             type="button"
             aria-label="Previous gallery image"
             onClick={handlePrevious}
-            className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#f3d9cf] bg-white text-[#f05623] shadow-[0_12px_26px_rgba(15,23,42,0.12)] transition hover:-translate-y-1/2 hover:bg-[#f05623] hover:text-white sm:left-4 sm:h-11 sm:w-11"
+            className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#f3d9cf] bg-white text-[#f05623] shadow-[0_12px_26px_rgba(15,23,42,0.12)] transition hover:-translate-y-1/2 hover:bg-[#80c141] hover:text-white sm:left-4 sm:h-11 sm:w-11"
           >
             <span aria-hidden="true" className="text-2xl font-semibold leading-none">&lt;</span>
           </button>
@@ -212,12 +274,12 @@ const CsLpDoctorProfile = () => {
             type="button"
             aria-label="Next gallery image"
             onClick={handleNext}
-            className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#f3d9cf] bg-white text-[#f05623] shadow-[0_12px_26px_rgba(15,23,42,0.12)] transition hover:-translate-y-1/2 hover:bg-[#f05623] hover:text-white sm:right-4 sm:h-11 sm:w-11"
+            className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#f3d9cf] bg-white text-[#f05623] shadow-[0_12px_26px_rgba(15,23,42,0.12)] transition hover:-translate-y-1/2 hover:bg-[#80c141] hover:text-white sm:right-4 sm:h-11 sm:w-11"
           >
             <span aria-hidden="true" className="text-2xl font-semibold leading-none">&gt;</span>
           </button>
 
-          <div className="mt-5 flex justify-center gap-3">
+          {/* <div className="mt-5 flex justify-center gap-3">
             {Array.from({ length: dotCount }, (_, index) => (
               <button
                 key={`dot-${index}`}
@@ -229,7 +291,7 @@ const CsLpDoctorProfile = () => {
                 }`}
               />
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

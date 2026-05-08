@@ -6,44 +6,50 @@ const videos = [
   {
     title: "Cervical Spondylosis Patient Testimonial 1",
     time: "YouTube",
-    url: "https://www.youtube.com/embed/xGUaIubhpfs?start=8",
-    thumbnail: "https://img.youtube.com/vi/xGUaIubhpfs/mqdefault.jpg",
+    url: "https://www.youtube.com/embed/S3_Tb-hRhdY",
+    thumbnail: "https://img.youtube.com/vi/S3_Tb-hRhdY/mqdefault.jpg",
   },
   {
     title: "Cervical Spondylosis Patient Testimonial 2",
     time: "YouTube",
-    url: "https://www.youtube.com/embed/3jQOPTmaX6M?start=4",
-    thumbnail: "https://img.youtube.com/vi/3jQOPTmaX6M/mqdefault.jpg",
+    url: "https://www.youtube.com/embed/469Zv1a1iQw",
+    thumbnail: "https://img.youtube.com/vi/469Zv1a1iQw/mqdefault.jpg",
   },
   {
     title: "Cervical Spondylosis Patient Testimonial 3",
     time: "YouTube",
-    url: "https://www.youtube.com/embed/zb2Tn3HfENE?start=1",
-    thumbnail: "https://img.youtube.com/vi/zb2Tn3HfENE/mqdefault.jpg",
+    url: "https://www.youtube.com/embed/oMkd0Xlusmk?start=2",
+    thumbnail: "https://img.youtube.com/vi/oMkd0Xlusmk/mqdefault.jpg",
   },
   {
     title: "Cervical Spondylosis Patient Testimonial 4",
     time: "YouTube",
-    url: "https://www.youtube.com/embed/GjoWRyD57Ew",
-    thumbnail: "https://img.youtube.com/vi/GjoWRyD57Ew/mqdefault.jpg",
+    url: "https://www.youtube.com/embed/jwu-1aBq4hU",
+    thumbnail: "https://img.youtube.com/vi/jwu-1aBq4hU/mqdefault.jpg",
   },
   {
     title: "Cervical Spondylosis Patient Testimonial 5",
     time: "YouTube",
-    url: "https://www.youtube.com/embed/L88qXtNowc8?start=1",
-    thumbnail: "https://img.youtube.com/vi/L88qXtNowc8/mqdefault.jpg",
+    url: "https://www.youtube.com/embed/CM6gwwovDrM",
+    thumbnail: "https://img.youtube.com/vi/CM6gwwovDrM/mqdefault.jpg",
   },
   {
     title: "Cervical Spondylosis Patient Testimonial 6",
     time: "YouTube",
-    url: "https://www.youtube.com/embed/LsBDZesJ-hw?start=8",
-    thumbnail: "https://img.youtube.com/vi/LsBDZesJ-hw/mqdefault.jpg",
+    url: "https://www.youtube.com/embed/MYjE4l27DvM",
+    thumbnail: "https://img.youtube.com/vi/MYjE4l27DvM/mqdefault.jpg",
   },
   {
     title: "Cervical Spondylosis Patient Testimonial 7",
     time: "YouTube",
-    url: "https://www.youtube.com/embed/j5pVlH0-gVc?start=1",
-    thumbnail: "https://img.youtube.com/vi/j5pVlH0-gVc/mqdefault.jpg",
+    url: "https://www.youtube.com/embed/FwHYgIERCcc",
+    thumbnail: "https://img.youtube.com/vi/FwHYgIERCcc/mqdefault.jpg",
+  },
+  {
+    title: "Cervical Spondylosis Patient Testimonial 8",
+    time: "YouTube",
+    url: "https://www.youtube.com/embed/aLvrJtbEW8A?start=6",
+    thumbnail: "https://img.youtube.com/vi/aLvrJtbEW8A/mqdefault.jpg",
   },
 ];
 
@@ -54,7 +60,7 @@ export default function CsLpYoutubePlaylist() {
     <div className="flex flex-col items-center px-4 py-10 max-[470px]:py-5 sm:px-6 bg-[radial-gradient(circle_at_top,rgba(240,86,35,0.12),transparent_28%),linear-gradient(180deg,#fff3eb_0%,#fffaf6_100%)]">
       <div className="flex justify-center">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-bold text-[#114520] text-center leading-tight max-[470px]:mb-5 mb-10">
-          1500+ Cervical Spondylosis{" "}
+          500+ {" "}
           <span className="text-[#f05623]">Patients Healed</span>
         </h2>
       </div>
@@ -104,12 +110,7 @@ export default function CsLpYoutubePlaylist() {
 
       <div className="mt-10 flex w-full max-w-4xl flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-center sm:gap-5">
         <a href="#appointment-form" className="w-full sm:w-auto">
-          <button className="w-full justify-center rounded-xl bg-[#f05623] px-6 py-4 text-base font-bold text-white shadow-[0_16px_30px_rgba(240,86,35,0.28)] transition-colors duration-200 hover:bg-[#d94e1a] sm:min-w-[300px] sm:px-8 sm:text-lg">
-            Speak To Our Patients
-          </button>
-        </a>
-        <a href="#appointment-form" className="w-full sm:w-auto">
-          <button className="w-full justify-center rounded-xl bg-[#f05623] px-6 py-4 text-base font-bold text-white shadow-[0_16px_30px_rgba(240,86,35,0.28)] transition-colors duration-200 hover:bg-[#d94e1a] sm:min-w-[300px] sm:px-8 sm:text-lg">
+          <button className="w-full justify-center rounded-xl bg-[#f05623] px-6 py-4 text-base font-bold text-white shadow-[0_16px_30px_rgba(240,86,35,0.28)] transition-colors duration-200 hover:bg-[#80c141] sm:min-w-[300px] sm:px-8 sm:text-lg">
             Get a Teleconsultation Today
           </button>
         </a>

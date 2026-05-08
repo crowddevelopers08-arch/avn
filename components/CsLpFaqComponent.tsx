@@ -16,51 +16,51 @@ const CsLpFaqComponent: React.FC<FAQComponentProps> = ({
   faqs = [
     {
       id: 1,
-      question: "What exactly is Cervical Spondylosis?",
+      question: "What is Cervical Spondylosis?",
       answer:
-        "Cervical Spondylosis is age-related wear and tear of the cervical spine (neck), causing bone spurs and disc degeneration that compress nerves and the spinal cord, leading to neck pain, stiffness, and radiating arm symptoms.",
+        "Age-related wear and tear of neck discs. In Ayurveda, it's linked to Vata imbalance causing stiffness and radiating pain.",
     },
     {
       id: 2,
-      question: "Can Cervical Spondylosis be treated without surgery?",
+      question: "Can it be treated without surgery?",
       answer:
-        "Yes — in most cases, Cervical Spondylosis can be effectively managed with Ayurvedic Panchakarma therapies, Physiotherapy, and Cervical Traction without requiring surgery.",
+        "Yes. Holistic Ayurvedic treatments focus on reducing inflammation, relaxing muscles, and strengthening the spine.",
     },
     {
       id: 3,
-      question: "How long does the treatment take?",
+      question: "How long does treatment take?",
       answer:
-        "Our integrated Ayurvedic program typically lasts 3–4 weeks depending on the severity, with most patients experiencing noticeable relief within the first 2 weeks.",
+        "Mild: Improves with medicines & exercises\nSevere: 10-21 days in-patient care\nRecovery: Noticeable relief in 45 days; major recovery in 2-4 months",
     },
     {
       id: 4,
-      question: "Is MRI necessary for diagnosis?",
+      question: "Is MRI required?",
       answer:
-        "Yes. MRI of the cervical spine is the most accurate tool to assess nerve compression, disc herniation, and the degree of spondylosis — essential for planning the right treatment.",
+        "Yes. It helps assess disc condition and plan the right treatment.",
     },
     {
       id: 5,
-      question: "What are the major causes of Cervical Spondylosis?",
+      question: "What are the main causes?",
       answer:
-        "Major causes include advancing age, poor posture (desk jobs, mobile phone use), sedentary lifestyle, previous neck injuries, and genetic predisposition to early disc degeneration.",
+        "Aging, poor posture, long screen time, minor injuries, obesity, and stress.",
     },
     {
       id: 6,
-      question: "What happens if Cervical Spondylosis is ignored?",
+      question: "What if untreated?",
       answer:
-        "Untreated Cervical Spondylosis can progress to chronic nerve compression, weakness in arms and legs, and in severe cases, cervical myelopathy requiring urgent surgical intervention.",
+        "May lead to spinal cord compression causing walking issues, numbness, or loss of control in severe cases.",
     },
     {
       id: 7,
       question: "Is insurance applicable?",
       answer:
-        "Coverage varies by insurer; our team assists with TPA coordination and insurance documentation for eligible inpatient Ayurvedic treatment packages.",
+        "Coverage varies; our team assists with TPA and insurance documentation.",
     },
     {
       id: 8,
-      question: "Who leads the treatment?",
+      question: "Who provides treatment?",
       answer:
-        "Dr. Ramesh Varier and his team of senior Ayurvedic physicians, physiotherapists, and yoga specialists design and oversee every patient's personalised treatment plan.",
+        "Dr. Ramesh Varier and his team of Ayurvedic and Physiotherapy specialists.",
     },
   ],
 }) => {
@@ -76,7 +76,7 @@ const CsLpFaqComponent: React.FC<FAQComponentProps> = ({
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-10 max-[470px]:py-5 bg-[linear-gradient(180deg,#fff9f3_0%,#f5fbf2_100%)]">
       <div className="flex justify-center">
-        <h2 className="mb-10 text-center text-2xl font-bold text-[#114520] sm:text-4xl lg:text-5xl max-[470px]:mb-5">
+        <h2 className="mb-10 text-center text-2xl font-bold text-[#114520] sm:text-3xl lg:text-4xl xl:text-[42px] max-[470px]:mb-5">
           Frequently Asked <span className="text-[#f05623]">Questions</span>
         </h2>
       </div>
@@ -157,7 +157,7 @@ const CsLpFaqItem: React.FC<{
           <div className="rounded-lg border border-[#88be22]/20 bg-gradient-to-r from-[#f8faf7] to-[#f0f8ec] p-4">
             <div className="flex items-start">
               <div className="mr-3 mt-1 h-full w-1 flex-shrink-0 rounded-full bg-gradient-to-b from-[#f05623] to-[#88be22]" />
-              <p className="flex-1 text-sm font-medium leading-relaxed text-gray-700">
+              <p className="flex-1 whitespace-pre-line text-sm font-medium leading-relaxed text-gray-700">
                 {faq.answer}
               </p>
             </div>

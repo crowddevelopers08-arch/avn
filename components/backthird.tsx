@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
+import { withImageKit } from "@/lib/imagekit";
 
 const CardGrid = () => {
   const cardGridRef = useRef(null);
@@ -10,37 +11,37 @@ const CardGrid = () => {
       id: 1,
       title: "Sciatica",
       description: "Sharp, radiating pain that travels from the lower back to one or both legs due to nerve compression.",
-      image: "sciaticaback.jpg"
+      image: withImageKit("sciaticaback.jpg")
     },
     {
       id: 2,
       title: "Slipped / Herniated / Bulging Disc",
       description: "Displacement or rupture of spinal discs causing stiffness, numbness, and severe back pain.",
-      image: "depositphotos.jpg"
+      image: withImageKit("depositphotos.jpg")
     },
     {
       id: 3,
       title: "Lumbar Spondylosis",
       description: "Degeneration of the lower spine leading to chronic back pain, stiffness, and reduced flexibility.",
-      image: "lunamm.png"
+      image: withImageKit("lunamm.png")
     },
     {
       id: 4,
       title: "Spinal Stenosis",
       description: "Narrowing of spinal spaces that puts pressure on the nerves, often leading to walking difficulties.",
-      image: "synooo.jpg"
+      image: withImageKit("synooo.jpg")
     },
     {
       id: 5,
       title: "Sacroiliitis (including Ankylosing Spondylitis)",
       description: "Inflammation of the sacroiliac joint that connects the spine and pelvis, causing buttock and lower back pain.",
-      image: "Sacroiliitis.jpg"
+      image: withImageKit("Sacroiliitis.jpg")
     },
     {
       id: 6,
       title: "Spondylolysis",
       description: "Stress fracture or defect in the vertebra causing instability, especially in young athletes or repetitive strain cases.",
-      image: "Spondylolysis.jpg"
+      image: withImageKit("Spondylolysis.jpg")
     }
   ];
 

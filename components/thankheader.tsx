@@ -148,7 +148,7 @@ export default function Thankheader() {
         <div className="flex-shrink-0">
           <img 
             className="w-auto h-20 max-[470px]:h-10 max-[350px]:w-[170px] object-contain" 
-            src="AVN-logo.png" 
+            src="https://ik.imagekit.io/waseev72f/AVN-logo.png" 
             alt="Ayush Ortho Logo" 
           />
         </div>

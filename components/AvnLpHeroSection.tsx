@@ -10,10 +10,10 @@ export default function AvnLpHeroSection() {
       </div>
 
       <div
-        className="flex items-center justify-center px-4 py-6 sm:px-6 sm:py-8 lg:px-8"
+        className="flex items-center justify-center px-4 py-7 sm:px-6 sm:py-12 lg:px-8 lg:py-14"
         style={{ backgroundColor: "#D94E1A", flex: "0 0 54%" }}
       >
-        <div className="w-full max-w-[680px] overflow-hidden bg-white shadow-2xl">
+        <div className="mt-2 w-full max-w-[680px] overflow-hidden bg-white shadow-2xl sm:mt-6 lg:mt-8">
           <iframe
             aria-label="Fix your Appointment"
             frameBorder="0"

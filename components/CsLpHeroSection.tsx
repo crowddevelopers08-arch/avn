@@ -4,16 +4,16 @@ export default function CsLpHeroSection() {
       <div className="bg-[#F0DDD3] px-4 pt-10 max-[470px]:pt-6 text-center sm:px-6 lg:hidden">
         <div className="mx-auto max-w-[520px]">
           <h1 className="mb-5 text-3xl font-black leading-tight text-gray-900 sm:text-4xl">
-            Proven Non-Surgical Cervical Spondylosis Treatment with Ayurveda
+            Effective Relief from Cervical Spondylosis with Ayurveda Treatments
           </h1>
         </div>
       </div>
 
       <div
-        className="flex items-center justify-center px-4 py-6 sm:px-6 sm:py-8 lg:px-8"
+        className="flex items-center justify-center px-4 py-7 sm:px-6 sm:py-12 lg:px-8 lg:py-14"
         style={{ backgroundColor: "#D94E1A", flex: "0 0 54%" }}
       >
-        <div className="w-full max-w-[680px] overflow-hidden bg-white shadow-2xl">
+        <div className="mt-2 w-full max-w-[680px] overflow-hidden bg-white shadow-2xl sm:mt-6 lg:mt-8">
           <iframe
             aria-label="Fix your Appointment"
             frameBorder="0"
@@ -29,14 +29,11 @@ export default function CsLpHeroSection() {
       >
         <div className="mx-auto max-w-[480px] lg:max-w-[520px]">
           <h1 className="mb-5 hidden text-3xl font-black leading-tight text-gray-900 sm:text-4xl xl:text-[2.65rem] lg:block">
-            Proven Non-Surgical Cervical Spondylosis Treatment with Ayurveda
+           Effective Relief from Cervical Spondylosis with Ayurveda Treatments
+
           </h1>
           <p className="text-base leading-relaxed text-gray-700 sm:text-lg">
-            1,500+ Cervical Spondylosis patients have shown significant
-            improvement and are now living pain-free after undergoing our
-            Holistic Ayurvedic Treatment. Our patients experience lasting
-            relief from neck pain, stiffness, and nerve compression — without
-            surgery, naturally.
+           Experience the power of natural healing with personalized Ayurvedic treatments at AVN Arogya.
           </p>
         </div>
       </div>

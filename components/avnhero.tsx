@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Phone, Calendar, Shield, Star, Heart } from "lucide-react"
 import { AvnconsultationModal } from "./avnpopupform"
 import { LocationModal, useLocationModal } from "./calllocations"
+import { withImageKit } from "@/lib/imagekit"
 
 export function Avnhero() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,9 +15,9 @@ export function Avnhero() {
   const { isLocationModalOpen, openLocationModal, closeLocationModal } = useLocationModal()
 
   const backgroundImages = [
-    "neck.jpeg",
-    "avnthree.jpg",
-    "ban6.jpeg"
+    withImageKit("neck.jpeg"),
+    withImageKit("avnthree.jpg"),
+    withImageKit("ban6.jpeg")
   ]
 
   useEffect(() => {

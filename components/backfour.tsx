@@ -1,11 +1,12 @@
 "use client";
 import React from 'react';
+import { withImageKit } from "@/lib/imagekit";
 
 const BackDoctorProfile = () => {
   const doctors = [
     {
       name: "Dr. Ramesh R Varier",
-      image: "Dr.Ramesh.jpg",
+      image: withImageKit("Dr.Ramesh.jpg"),
       experience: "35+ Years",
       title: "Managing Director & Chief Ayurvedic Physician – AVN Arogya Ayurvedic Hospital",
       specialization: "Specialist in Spine & Joint Disorders | 35+ Years of Clinical Excellence",
@@ -15,7 +16,7 @@ const BackDoctorProfile = () => {
     },
     {
       name: "Dr. Sridevi Rajeev",
-      image: "doctwo.jpg",
+      image: withImageKit("doctwo.jpg"),
       experience: "32 Years",
       title: "Director and Chief Physician",
       specialization: "Treatment of Musculoskeletal, Rheumatological and Developmental Disorders",
@@ -26,7 +27,7 @@ const BackDoctorProfile = () => {
     },
     {
       name: "Dr. Biju Madhavan",
-      image: "docthree.jpg",
+      image: withImageKit("docthree.jpg"),
       experience: "23 Years",
       title: "Medical Superintendent",
       specialization: "Treatment of Musculoskeletal and Neurological Disorders",

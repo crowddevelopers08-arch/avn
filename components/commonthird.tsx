@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
+import { withImageKit } from "@/lib/imagekit";
 
 const Hipfour = () => {
   const cardGridRef = useRef(null);
@@ -10,19 +11,19 @@ const Hipfour = () => {
       id: 1,
       title: "Hip AVN (Avascular Necrosis)",
       description: "Loss of blood supply to hip bone leading to joint collapse, severe pain, and limited mobility. Ayurveda helps restore vascularity and preserve joint function.",
-      image: "avascular-necrosis.jpg"
+      image: withImageKit("avascular-necrosis.jpg")
     },
     {
       id: 2,
       title: "Post-Viral Hip Arthritis",
       description: "Sudden hip pain and stiffness after viral infections like Chikungunya or Dengue, causing difficulty in walking and movement.",
-      image: "hiparthisis.jpg"
+      image: withImageKit("hiparthisis.jpg")
     },
     {
       id: 3,
       title: "Hip Osteoarthritis",
       description: "Degenerative wear and tear of hip joint cartilage, causing chronic pain, stiffness, and reduced range of motion.",
-      image: "orthesisii.jpg"
+      image: withImageKit("orthesisii.jpg")
     }
   ];
 

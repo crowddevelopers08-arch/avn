@@ -3,45 +3,46 @@ import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { KneeconsultationModal } from "./kneepopupform";
+import { withImageKit } from "@/lib/imagekit";
 
 const items = [
   {
-    image: "/svgone.png",
+    image: withImageKit("/svgone.png"),
     title: "Tailor-Made Ayurvedic Therapy",
     desc: "Two specialised therapy sessions per day, designed for your unique health condition.",
   },
   {
-    image: "/svgtwo.png",
+    image: withImageKit("/svgtwo.png"),
     title: "Physiotherapy and Exercise",
     desc: "Personalised physiotherapy and exercise guidance tailored to your current stage of recovery.",
   },
   {
-    image: "/svgthree.png",
+    image: withImageKit("/svgthree.png"),
     title: "Personalised Medications",
     desc: "Ayurvedic medicines that specifically target and address your health concerns.",
   },
   {
-    image: "/svgfour.png",
+    image: withImageKit("/svgfour.png"),
     title: "Personalised Yoga",
     desc: "Personalised yoga sessions to aid in your recovery.",
   },
   {
-    image: "/svgfive.png",
+    image: withImageKit("/svgfive.png"),
     title: "Supplements and Vitamins",
     desc: "Supplements & vitamins, if necessary, to support overall well-being.",
   },
   {
-    image: "/svgsix.png",
+    image: withImageKit("/svgsix.png"),
     title: "Tailor-Made Diet",
     desc: "A diet plan, meticulously crafted, to align with your unique health parameters and needs.",
   },
   {
-    image: "/svgseven.png",
+    image: withImageKit("/svgseven.png"),
     title: "Integrated Allopathic Care",
     desc: "Your conventional allopathic medications will be continued as prescribed to ensure a holistic approach to your health.",
   },
   {
-    image: "/svgeight.png",
+    image: withImageKit("/svgeight.png"),
     title: "24/7 Professional and Compassionate Care",
     desc: "Constant, high-quality care in a warm and supportive environment.",
   },

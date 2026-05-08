@@ -1,11 +1,24 @@
 "use client";
 import React from 'react';
+import { withImageKit } from "@/lib/imagekit";
+
+interface DoctorProfile {
+  name: string;
+  image: string;
+  experience: string;
+  title: string;
+  specialization: string;
+  description: string;
+  education: string;
+  languages: string[];
+  achievements?: string;
+}
 
 const AvnDoctorProfile = () => {
-  const doctors = [
+  const doctors: DoctorProfile[] = [
     {
       name: "Dr. Ramesh R Varier",
-      image: "Dr.Ramesh.jpg",
+      image: withImageKit("Dr.Ramesh.jpg"),
       experience: "35+ Years",
       title: "Managing Director & Chief Ayurvedic Physician – AVN Arogya Ayurvedic Hospital",
       specialization: "Specialist in Spine & Joint Disorders | 35+ Years of Clinical Excellence",

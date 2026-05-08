@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
+import { withImageKit } from "@/lib/imagekit";
 
 const Hipthird = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -164,7 +165,7 @@ const Hipthird = () => {
                 ref={imageRef}
                 width="600"
                 height="600"
-                src="neck.jpeg"
+                src={withImageKit("neck.jpeg")}
                 alt="AVN Arogya Ayurvedic Treatment Center"
                 className={`mx-auto rounded-xl shadow-xl border-4 border-white bg-gray-300 transition-all duration-1000 hover:shadow-2xl relative z-10 w-full max-w-md sm:max-w-lg lg:max-w-none ${
                   isVisible ? 'opacity-100 scale-100 translate-x-0' : 'opacity-0 scale-95 translate-x-8'

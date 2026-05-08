@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import { withImageKit } from "@/lib/imagekit";
 
 interface Doctor {
   name: string;
@@ -14,7 +15,7 @@ interface Doctor {
 const doctors: Doctor[] = [
   {
     name: "Dr. Ramesh R Varier",
-    image: "/Dr.Ramesh.jpg",
+    image: withImageKit("/Dr.Ramesh.jpg"),
     experience: "35+ Years",
     descriptions: [
       "Dr. Ramesh R Varier, our Managing Director and Senior Physician, graduated as 1st Rank Holder from Madras University in 1986. With over 35 years of mastery in this field, he offers unmatched expertise in musculoskeletal solutions.",
@@ -26,15 +27,15 @@ const doctors: Doctor[] = [
 ];
 
 const carouselImages = [
-  "/1-1.jpg",
-  "/1-2.jpg",
-  "/2-1.jpg",
-  "/2-2.jpg",
-  "/3-1.jpg",
-  "/3-2.jpg",
-  "/4-1.jpg",
-  "/5-1.jpg",
-  "/6-1.jpg",
+  withImageKit("/1-1.jpg"),
+  withImageKit("/1-2.jpg"),
+  withImageKit("/2-1.jpg"),
+  withImageKit("/2-2.jpg"),
+  withImageKit("/3-1.jpg"),
+  withImageKit("/3-2.jpg"),
+  withImageKit("/4-1.jpg"),
+  withImageKit("/5-1.jpg"),
+  withImageKit("/6-1.jpg"),
 ];
 
 const MOBILE_BREAKPOINT = 640;
@@ -171,7 +172,7 @@ const AvnLpDoctorProfile = () => {
             type="button"
             aria-label="Previous gallery image"
             onClick={handlePrevious}
-            className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#f3d9cf] bg-white text-[#f05623] shadow-[0_12px_26px_rgba(15,23,42,0.12)] transition hover:-translate-y-1/2 hover:bg-[#f05623] hover:text-white sm:left-4 sm:h-11 sm:w-11"
+            className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#f3d9cf] bg-white text-[#f05623] shadow-[0_12px_26px_rgba(15,23,42,0.12)] transition hover:-translate-y-1/2 hover:bg-[#80c141] hover:text-white sm:left-4 sm:h-11 sm:w-11"
           >
             <span aria-hidden="true" className="text-2xl font-semibold leading-none">&lt;</span>
           </button>
@@ -212,7 +213,7 @@ const AvnLpDoctorProfile = () => {
             type="button"
             aria-label="Next gallery image"
             onClick={handleNext}
-            className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#f3d9cf] bg-white text-[#f05623] shadow-[0_12px_26px_rgba(15,23,42,0.12)] transition hover:-translate-y-1/2 hover:bg-[#f05623] hover:text-white sm:right-4 sm:h-11 sm:w-11"
+            className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#f3d9cf] bg-white text-[#f05623] shadow-[0_12px_26px_rgba(15,23,42,0.12)] transition hover:-translate-y-1/2 hover:bg-[#80c141] hover:text-white sm:right-4 sm:h-11 sm:w-11"
           >
             <span aria-hidden="true" className="text-2xl font-semibold leading-none">&gt;</span>
           </button>

@@ -78,7 +78,7 @@ const AvnLpFaqComponent: React.FC<FAQComponentProps> = ({
       className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-10 max-[470px]:py-5 bg-[linear-gradient(180deg,#fff9f3_0%,#f5fbf2_100%)]"
     >
       <div className="flex justify-center">
-        <h2 className="mb-10 text-center text-2xl font-bold text-[#114520] sm:text-4xl lg:text-5xl max-[470px]:mb-5">
+        <h2 className="mb-10 text-center text-2xl font-bold text-[#114520] sm:text-3xl lg:text-4xl xl:text-[42px] max-[470px]:mb-5">
           Frequently Asked <span className="text-[#f05623]">Questions</span>
         </h2>
       </div>

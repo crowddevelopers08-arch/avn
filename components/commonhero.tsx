@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Phone, Calendar, Shield, Star, Heart } from "lucide-react"
 import { HipconsultationModal } from "./Hippopup"
 import { LocationModal, useLocationModal } from "./calllocations"
+import { withImageKit } from "@/lib/imagekit"
 
 export function Hiphero() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -634,7 +635,7 @@ export function Hiphero() {
                 {/* Top circular image */}
                 <div className="circular-image circular-image-top">
                   <img
-                    src="oman.jpg"
+                    src={withImageKit("oman.jpg")}
                     alt="Knee joint anatomy illustration"
                   />
                 </div>
@@ -642,7 +643,7 @@ export function Hiphero() {
                 {/* Bottom left circular image */}
                 <div className="circular-image circular-image-left">
                   <img
-                    src="phyi.jpeg"
+                    src={withImageKit("phyi.jpeg")}
                     alt="Ayurvedic knee treatment"
                   />
                 </div>
@@ -650,7 +651,7 @@ export function Hiphero() {
                 {/* Bottom right circular image */}
                 <div className="circular-image circular-image-right">
                   <img
-                    src="hipu.jpg"
+                    src={withImageKit("hipu.jpg")}
                     alt="Healthy knee mobility"
                   />
                 </div>

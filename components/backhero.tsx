@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X, Phone, Calendar, Shield, Star, Heart } from "lucide-react"
 import { BackconsultationModal } from "./backpopupform"
 import { LocationModal, useLocationModal } from "./calllocations"
+import { withImageKit } from "@/lib/imagekit"
 
 export function Backhero() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -159,7 +160,7 @@ export function Backhero() {
         }
 
         .hero-background {
-          background-image: url('/avnback.jpg');
+          background-image: url('${withImageKit("/avnback.jpg")}');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;

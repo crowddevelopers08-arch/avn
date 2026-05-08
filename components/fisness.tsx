@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
+import { withImageKit } from "@/lib/imagekit";
 
 const CardGrid = () => {
   const cardGridRef = useRef(null);
@@ -10,37 +11,37 @@ const CardGrid = () => {
       id: 1,
       title: "Osteoarthritis (Knee)",
       description: "Degeneration of knee cartilage causing joint pain, stiffness, and difficulty in climbing stairs or walking long distances.",
-      image: "Osteoarthritis.png"
+      image: "https://ik.imagekit.io/waseev72f/Osteoarthritis.png"
     },
     {
       id: 2,
       title: "Rheumatoid Arthritis (Knee)",
       description: "An autoimmune condition causing joint inflammation, swelling, and progressive pain in one or both knees.",
-      image: "rehmu.jpeg"
+      image: withImageKit("rehmu.jpeg")
     },
     {
       id: 3,
       title: "Polyarthritis (Knee & Ankle)",
       description: "Multiple joint pain involving the knees and ankles, often due to chronic conditions or systemic inflammation.",
-      image: "poly.jpg"
+      image: withImageKit("poly.jpg")
     },
     {
       id: 4,
       title: "Post-Viral Arthritis (Knee & Ankle)",
       description: "Sudden onset joint pain and swelling after viral infections like Chikungunya, affecting mobility and strength.",
-      image: "How-to.jpeg"
+      image: withImageKit("How-to.jpeg")
     },
     {
       id: 5,
       title: "Plantar Fasciitis",
       description: "Heel pain and stiffness due to inflammation of the tissue band connecting heel bone to toes, often worse in the morning.",
-      image: "plantar.jpg"
+      image: withImageKit("plantar.jpg")
     },
     {
       id: 6,
       title: "Achilles Tendinitis / Calcaneal Bursitis",
       description: "Inflammation around the heel or Achilles tendon causing pain during walking, running, or standing for long periods.",
-      image: "achilles.jpg"
+      image: "https://ik.imagekit.io/waseev72f/achilles.jpg"
     }
   ];
 

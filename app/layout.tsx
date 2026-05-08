@@ -23,16 +23,16 @@ export const metadata: Metadata = {
   generator: "Nextjs15",
   icons: {
     icon: [
-      { url: "/avnfav.png", sizes: "16x16", type: "image/png" },
-      { url: "/avnfav.png", sizes: "32x32", type: "image/png" },
-      { url: "/avnfav.png", sizes: "48x48", type: "image/png" },
-      { url: "/avnfav.png", sizes: "192x192", type: "image/png" },
-      { url: "/avnfav.png", sizes: "512x512", type: "image/png" }, 
+      { url: "https://ik.imagekit.io/waseev72f/avnfav.png", sizes: "16x16", type: "image/png" },
+      { url: "https://ik.imagekit.io/waseev72f/avnfav.png", sizes: "32x32", type: "image/png" },
+      { url: "https://ik.imagekit.io/waseev72f/avnfav.png", sizes: "48x48", type: "image/png" },
+      { url: "https://ik.imagekit.io/waseev72f/avnfav.png", sizes: "192x192", type: "image/png" },
+      { url: "https://ik.imagekit.io/waseev72f/avnfav.png", sizes: "512x512", type: "image/png" }, 
     ],
     apple: [
-      { url: "/avnfav.png", sizes: "180x180", type: "image/png" },
+      { url: "https://ik.imagekit.io/waseev72f/avnfav.png", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/avnfav.png",
+    shortcut: "https://ik.imagekit.io/waseev72f/avnfav.png",
   }
 }
 

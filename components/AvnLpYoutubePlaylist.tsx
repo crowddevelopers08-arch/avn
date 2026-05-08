@@ -104,12 +104,12 @@ export default function AvnLpYoutubePlaylist() {
 
       <div className="mt-10 flex w-full max-w-4xl flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-center sm:gap-5">
         <a href="#appointment-form" className="w-full sm:w-auto">
-          <button className="w-full justify-center rounded-xl bg-[#f05623] px-6 py-4 text-base font-bold text-white shadow-[0_16px_30px_rgba(240,86,35,0.28)] transition-colors duration-200 hover:bg-[#d94e1a] sm:min-w-[300px] sm:px-8 sm:text-lg">
+          <button className="w-full justify-center rounded-xl bg-[#f05623] px-6 py-4 text-base font-bold text-white shadow-[0_16px_30px_rgba(240,86,35,0.28)] transition-colors duration-200 hover:bg-[#80c141] sm:min-w-[300px] sm:px-8 sm:text-lg">
             Speak To Our AVN Patients
           </button>
         </a>
         <a href="#appointment-form" className="w-full sm:w-auto">
-          <button className="w-full justify-center rounded-xl bg-[#f05623] px-6 py-4 text-base font-bold text-white shadow-[0_16px_30px_rgba(240,86,35,0.28)] transition-colors duration-200 hover:bg-[#d94e1a] sm:min-w-[300px] sm:px-8 sm:text-lg">
+          <button className="w-full justify-center rounded-xl bg-[#f05623] px-6 py-4 text-base font-bold text-white shadow-[0_16px_30px_rgba(240,86,35,0.28)] transition-colors duration-200 hover:bg-[#80c141] sm:min-w-[300px] sm:px-8 sm:text-lg">
             Get a Teleconsultation Today
           </button>
         </a>
