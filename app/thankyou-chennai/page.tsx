@@ -59,7 +59,7 @@ const ThankYouPageChennai: React.FC = () => {
               <div className="bg-[#80c141] rounded-full p-1 mr-3 mt-1">
                 <div className="w-2 h-2 bg-white rounded-full"></div>
               </div>
-              <span>Specialized treatment for <strong>Spinal Issues, Arthritis & Lifestyle Diseases</strong></span>
+              <span>Specialized treatments for <strong>Spinal Issues, Arthritis & Lifestyle Diseases</strong></span>
             </li>
             <li className="flex items-start">
               <div className="bg-[#80c141] rounded-full p-1 mr-3 mt-1">
