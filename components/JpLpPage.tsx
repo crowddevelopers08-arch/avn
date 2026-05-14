@@ -13,7 +13,7 @@ import JpLpYoutubePlaylist from "@/components/JpLpYoutubePlaylist";
 
 export default function JpLpPage() {
   return (
-    <main className="overflow-x-hidden pt-[88px] sm:pt-[82px]">
+    <main className="overflow-x-hidden pt-[56px] sm:pt-[82px]">
       <AvnLpHeader />
       <JpLpHeroSection />
       <JpLpAboutSection />

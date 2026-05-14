@@ -47,16 +47,16 @@ export default function ArthritisTreatmentWithAyurvedaAboutSection() {
   return (
     <section
       ref={sectionRef}
-      className={`bg-white px-4 py-8 transition-all duration-1000 sm:px-6 max-[470px]:py-6 sm:py-8 lg:px-8 lg:py-8 ${
+      className={`bg-white px-4 py-6 transition-all duration-1000 max-[470px]:py-4 sm:px-6 sm:py-8 lg:px-8 lg:py-8 ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
       }`}
     >
       <div
-        className="container mx-auto max-w-xl space-y-8 p-4 lg:max-w-7xl lg:space-y-12 lg:p-6"
+        className="container mx-auto max-w-xl space-y-5 p-3 sm:space-y-8 sm:p-4 lg:max-w-7xl lg:space-y-12 lg:p-6"
         style={{ fontFamily: "'Outfit', sans-serif" }}
       >
         <div className="text-center">
-          <h2 className="mb-4 max-[470px]:mb-0 text-2xl font-bold text-[#114520] sm:text-3xl lg:text-4xl xl:text-[42px]">
+          <h2 className="mb-2 max-[470px]:mb-1 text-2xl font-bold text-[#114520] sm:mb-4 sm:text-3xl lg:text-4xl xl:text-[42px]">
             Why <span className="text-[#f05623]">AVN AROGYA</span> for Arthritis Relief
           </h2>
         </div>

@@ -13,7 +13,7 @@ import AvnLpFooter from "@/components/AvnLpFooter";
 
 export default function ScLpPage() {
   return (
-    <main className="overflow-x-hidden pt-[88px] sm:pt-[82px]">
+    <main className="overflow-x-hidden pt-[56px] sm:pt-[82px]">
       <AvnLpHeader />
       <ScLpHeroSection />
       <ScLpAboutSection />

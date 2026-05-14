@@ -13,7 +13,7 @@ import AyBpLpYoutubePlaylist from "@/components/AyBpLpYoutubePlaylist";
 
 export default function AyBpLpPage() {
   return (
-    <main className="overflow-x-hidden pt-[88px] sm:pt-[82px]">
+    <main className="overflow-x-hidden pt-[56px] sm:pt-[82px]">
       <AvnLpHeader />
       <AyBpLpHeroSection />
       <AyBpLpAboutSection />

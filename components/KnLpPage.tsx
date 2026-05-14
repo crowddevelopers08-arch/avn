@@ -13,7 +13,7 @@ import AvnLpFooter from "@/components/AvnLpFooter";
 
 export default function KnLpPage() {
   return (
-    <main className="overflow-x-hidden pt-[88px] sm:pt-[82px]">
+    <main className="overflow-x-hidden pt-[56px] sm:pt-[82px]">
       <AvnLpHeader />
       <KnLpHeroSection />
       <KnLpAboutSection />

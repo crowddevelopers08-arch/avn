@@ -1,3 +1,5 @@
+import { ResponsiveComparisonTable } from "@/components/shared/ResponsiveComparisonSection";
+
 function CircleCheck() {
   return (
     <svg
@@ -70,40 +72,11 @@ export default function AyBpLpComparisonSection() {
           Take the First Step Towards Back pain Relief
         </h3>
 
-        <div className="overflow-x-auto rounded-2xl border border-[#d9d1c4] bg-white/90 shadow-[0_18px_45px_rgba(17,69,32,0.08)] backdrop-blur-sm">
-          <table className="w-full min-w-[760px] border-collapse text-base">
-            <thead>
-              <tr style={{ backgroundColor: "#F5D5C5" }}>
-                <th className="w-1/2 border border-gray-300 px-5 py-3 text-left text-base font-semibold text-gray-800 sm:px-8 sm:text-lg">
-                  Your Current Condition
-                </th>
-                <th className="w-1/2 border border-gray-300 px-5 py-3 text-left text-base font-semibold text-gray-800 sm:px-8 sm:text-lg">
-                  Treatment Benefits at AVN Arogya
-                </th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {comparisonRows.map((row) => (
-                <tr key={row.condition} className="align-top">
-                  <td className="w-1/2 border border-gray-300 px-5 py-3 sm:px-8">
-                    <p className="text-base font-bold text-gray-900 sm:text-lg">{row.condition}</p>
-                  </td>
-                  <td className="w-1/2 border border-gray-300 px-5 py-3 sm:px-8">
-                    <div className="flex flex-col divide-y divide-gray-200">
-                      {row.benefits.map((benefit) => (
-                        <div key={benefit} className="flex items-start gap-3 py-2">
-                          <CircleCheck />
-                          <span className="text-base leading-snug">{benefit}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <ResponsiveComparisonTable
+          leftHeader="Your Current Condition"
+          rightHeader="Treatment Benefits at AVN Arogya"
+          rows={comparisonRows}
+        />
       </div>
     </section>
   );

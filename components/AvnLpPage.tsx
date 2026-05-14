@@ -11,7 +11,7 @@ import AvnInsurancePartners from "@/components/avninsurance";
 
 export default function AvnLpPage() {
   return (
-    <main className="pt-[78px] sm:pt-[82px]">
+    <main className="pt-[56px] sm:pt-[82px]">
       <AvnLpHeader />
       <AvnLpHeroSection />
       <AvnLpComparisonSection />
