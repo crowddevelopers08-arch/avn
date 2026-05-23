@@ -1,36 +1,40 @@
 "use client";
-import React, { useState } from 'react'
-import { withImageKit } from '@/lib/imagekit'
+
+import React, { useState } from "react";
+
+const brandLogo = "https://ik.imagekit.io/waseev72f/AVN-logo.png";
 
 const ClientFeedback = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    suggestions: ''
+    name: "",
+    email: "",
+    phone: "",
+    suggestions: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [message, setMessage] = useState({ type: '', text: '' });
+  const [message, setMessage] = useState({ type: "", text: "" });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
-    // Clear message when user starts typing
-    if (message.text) setMessage({ type: '', text: '' });
+
+    if (message.text) setMessage({ type: "", text: "" });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setMessage({ type: '', text: '' });
+    setMessage({ type: "", text: "" });
 
     try {
-      const response = await fetch('/api/feedback', {
-        method: 'POST',
+      const response = await fetch("/api/feedback", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -38,13 +42,16 @@ const ClientFeedback = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage({ type: 'success', text: 'Feedback submitted successfully!' });
-        setFormData({ name: '', email: '', phone: '', suggestions: '' });
+        setMessage({ type: "success", text: "Feedback submitted successfully!" });
+        setFormData({ name: "", email: "", phone: "", suggestions: "" });
       } else {
-        setMessage({ type: 'error', text: result.error || 'Failed to submit feedback' });
+        setMessage({
+          type: "error",
+          text: result.error || "Failed to submit feedback",
+        });
       }
-    } catch (error) {
-      setMessage({ type: 'error', text: 'Network error. Please try again.' });
+    } catch {
+      setMessage({ type: "error", text: "Network error. Please try again." });
     } finally {
       setIsSubmitting(false);
     }
@@ -52,49 +59,55 @@ const ClientFeedback = () => {
 
   return (
     <>
-     <style jsx global>{`
-      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+      <style jsx global>{`
+        @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
       `}</style>
-      <div className="min-h-screen bg-[#0f1524] flex items-center justify-center p-3 sm:p-4 md:p-6"style={{fontFamily: "'Outfit', sans-serif" }}>
-        {/* Card Container */}
-        <div className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 w-full max-w-[95vw] sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto my-4">
-          {/* Logo Section */}
-          <div className="mb-4 sm:mb-6 md:mb-8 flex justify-center">
-            <div className="w-32 h-16 sm:w-36 sm:h-18 md:w-40 md:h-20 lg:w-44 lg:h-22 bg-gray-100 flex items-center justify-center overflow-hidden rounded-lg">
-              <img 
-                src={withImageKit("/ayushlogo.webp")} 
-                alt="Company Logo" 
-                className="w-full h-full object-contain p-1 sm:p-2"
+      <div
+        className="flex min-h-screen items-center justify-center bg-[radial-gradient(circle_at_top,_#f3f8e8_0%,_#dbeac6_30%,_#114520_100%)] p-3 sm:p-4 md:p-6"
+        style={{ fontFamily: "'Outfit', sans-serif" }}
+      >
+        <div className="mx-auto my-4 w-full max-w-[95vw] rounded-[28px] border border-white/60 bg-white/95 p-4 shadow-[0_24px_80px_rgba(17,69,32,0.22)] backdrop-blur sm:max-w-md sm:p-6 md:max-w-lg md:p-8 lg:max-w-xl">
+          <div className="mb-4 flex justify-center sm:mb-6 md:mb-8">
+            <div className="flex h-16 w-36 items-center justify-center overflow-hidden rounded-2xl bg-[#f6f9ee] ring-1 ring-[#d4e3bc] sm:w-40 md:h-20 md:w-44 lg:h-24 lg:w-52">
+              <img
+                src={brandLogo}
+                alt="AVN Arogya Logo"
+                className="h-full w-full object-contain p-2 sm:p-3"
               />
             </div>
           </div>
-          
-          {/* Help Us Improve Section */}
-          <div className="text-center mb-4 sm:mb-6 md:mb-8">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#0f1524] mb-2 sm:mb-3">
+
+          <div className="mb-4 text-center sm:mb-6 md:mb-8">
+            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#80c141] sm:mb-3 sm:text-xs">
+              We&apos;re Listening
+            </p>
+            <h2 className="mb-2 text-lg font-bold text-[#114520] sm:mb-3 sm:text-xl md:text-2xl lg:text-3xl">
               Help Us Improve!
             </h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed max-w-md mx-auto">
-              Tell us what didn't meet your expectations. We genuinely value your feedback and will work on making things better.
+            <p className="mx-auto max-w-md text-xs leading-relaxed text-[#4c5f42] sm:text-sm md:text-base lg:text-lg">
+              Tell us what didn&apos;t meet your expectations. We genuinely value your
+              feedback and will work on making things better.
             </p>
           </div>
-          
-          {/* Message Display */}
+
           {message.text && (
-            <div className={`mb-4 p-3 rounded-lg text-center ${
-              message.type === 'success' 
-                ? 'bg-green-100 text-green-800 border border-green-200' 
-                : 'bg-red-100 text-red-800 border border-red-200'
-            }`}>
+            <div
+              className={`mb-4 rounded-lg border p-3 text-center ${
+                message.type === "success"
+                  ? "border-[#b7daa0] bg-[#f3f8e8] text-[#114520]"
+                  : "border-[#f7b9a5] bg-[#fff1ec] text-[#b7421c]"
+              }`}
+            >
               {message.text}
             </div>
           )}
-          
-          {/* Form Section */}
+
           <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 md:space-y-5">
-            {/* Name Field */}
             <div>
-              <label htmlFor="name" className="block text-xs sm:text-sm md:text-base font-medium text-[#0f1524] mb-1 sm:mb-2">
+              <label
+                htmlFor="name"
+                className="mb-1 block text-xs font-medium text-[#114520] sm:mb-2 sm:text-sm md:text-base"
+              >
                 Full Name *
               </label>
               <input
@@ -105,14 +118,16 @@ const ClientFeedback = () => {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                className="w-full px-3 py-2 sm:px-3 sm:py-2 text-xs sm:text-sm md:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#e13e20] focus:border-transparent transition-all duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full rounded-xl border border-[#d7e2c7] bg-[#fbfdf8] px-3 py-2 text-xs transition-all duration-200 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#80c141] disabled:cursor-not-allowed disabled:bg-gray-100 sm:text-sm md:text-base"
                 placeholder="Enter your full name"
               />
             </div>
 
-            {/* Email Field */}
             <div>
-              <label htmlFor="email" className="block text-xs sm:text-sm md:text-base font-medium text-[#0f1524] mb-1 sm:mb-2">
+              <label
+                htmlFor="email"
+                className="mb-1 block text-xs font-medium text-[#114520] sm:mb-2 sm:text-sm md:text-base"
+              >
                 Email Address *
               </label>
               <input
@@ -123,14 +138,16 @@ const ClientFeedback = () => {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                className="w-full px-3 py-2 sm:px-3 sm:py-2 text-xs sm:text-sm md:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#e13e20] focus:border-transparent transition-all duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full rounded-xl border border-[#d7e2c7] bg-[#fbfdf8] px-3 py-2 text-xs transition-all duration-200 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#80c141] disabled:cursor-not-allowed disabled:bg-gray-100 sm:text-sm md:text-base"
                 placeholder="Enter your email address"
               />
             </div>
 
-            {/* Phone Field */}
             <div>
-              <label htmlFor="phone" className="block text-xs sm:text-sm md:text-base font-medium text-[#0f1524] mb-1 sm:mb-2">
+              <label
+                htmlFor="phone"
+                className="mb-1 block text-xs font-medium text-[#114520] sm:mb-2 sm:text-sm md:text-base"
+              >
                 Phone Number *
               </label>
               <input
@@ -141,14 +158,16 @@ const ClientFeedback = () => {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                className="w-full px-3 py-2 sm:px-3 sm:py-2 text-xs sm:text-sm md:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#e13e20] focus:border-transparent transition-all duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full rounded-xl border border-[#d7e2c7] bg-[#fbfdf8] px-3 py-2 text-xs transition-all duration-200 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#80c141] disabled:cursor-not-allowed disabled:bg-gray-100 sm:text-sm md:text-base"
                 placeholder="Enter your phone number"
               />
             </div>
 
-            {/* Suggestions Field */}
             <div>
-              <label htmlFor="suggestions" className="block text-xs sm:text-sm md:text-base font-medium text-[#0f1524] mb-1 sm:mb-2">
+              <label
+                htmlFor="suggestions"
+                className="mb-1 block text-xs font-medium text-[#114520] sm:mb-2 sm:text-sm md:text-base"
+              >
                 Your Suggestions *
               </label>
               <textarea
@@ -159,33 +178,36 @@ const ClientFeedback = () => {
                 required
                 rows={3}
                 disabled={isSubmitting}
-                className="w-full px-3 py-2 sm:px-3 sm:py-2 text-xs sm:text-sm md:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#e13e20] focus:border-transparent resize-none transition-all duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full resize-none rounded-xl border border-[#d7e2c7] bg-[#fbfdf8] px-3 py-2 text-xs transition-all duration-200 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#80c141] disabled:cursor-not-allowed disabled:bg-gray-100 sm:text-sm md:text-base"
                 placeholder="Share your valuable suggestions and feedback..."
               />
             </div>
 
-            {/* Submit Button */}
-            <button 
+            <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full cursor-pointer py-2 sm:py-2 md:py-3 bg-[#e13e20] text-white text-sm sm:text-base md:text-lg font-semibold rounded-lg hover:bg-[#c2351a] disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-transform duration-200 mt-3 sm:mt-4"
+              className="mt-3 w-full cursor-pointer rounded-xl bg-[#114520] py-2 text-sm font-semibold text-white shadow-lg shadow-[#114520]/20 transition-all duration-200 hover:scale-[1.02] hover:bg-[#0c3318] hover:shadow-xl disabled:cursor-not-allowed disabled:bg-gray-400 sm:mt-4 sm:text-base md:py-3 md:text-lg"
             >
-              {isSubmitting ? 'Submitting...' : 'Submit Feedback'}
+              {isSubmitting ? "Submitting..." : "Submit Feedback"}
             </button>
           </form>
 
-          {/* Back Button */}
-          <button 
+          <button
             onClick={() => window.history.back()}
             disabled={isSubmitting}
-            className="w-full cursor-pointer py-2 sm:py-2 md:py-3 bg-transparent border-2 border-[#e13e20] text-[#e13e20] text-sm sm:text-base md:text-lg font-semibold rounded-lg hover:bg-[#e13e20] hover:text-white disabled:border-gray-400 disabled:text-gray-400 disabled:hover:bg-transparent transition-all duration-200 transform hover:scale-[1.02] transition-transform duration-200 mt-2 sm:mt-3"
+            className="mt-2 w-full cursor-pointer rounded-xl border-2 border-[#f05623] bg-transparent py-2 text-sm font-semibold text-[#f05623] transition-all duration-200 hover:scale-[1.02] hover:bg-[#f05623] hover:text-white disabled:border-gray-400 disabled:text-gray-400 disabled:hover:bg-transparent sm:mt-3 sm:text-base md:py-3 md:text-lg"
           >
             Back to Home
           </button>
+
+          <div className="mt-3 rounded-2xl bg-[#f6f9ee] px-4 py-3 text-center text-xs text-[#4c5f42] sm:text-sm">
+            Honest feedback helps us improve the care journey for every patient
+            who visits AVN Arogya.
+          </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ClientFeedback
+export default ClientFeedback;
