@@ -93,13 +93,13 @@ export default function RootLayout({
           }}
         />
 
-        {/* Zoho Forms GCLID Script */}
+        {/* Zoho Forms GCLID Script - Added from your request */}
         <Script
           src="https://forms.zoho.in/js/zf_gclid.js"
           strategy="afterInteractive"
         />
 
-        {/* Zoho CRM Analytics Script */}
+        {/* Zoho CRM Analytics Script - Added from your request */}
         <Script
           src="https://crm.zoho.in/crm/javascript/zcga.js"
           strategy="afterInteractive"
