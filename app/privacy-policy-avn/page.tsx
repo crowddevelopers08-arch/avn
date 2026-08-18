@@ -36,7 +36,7 @@ const PrivacyPolicyavn: React.FC = () => {
                 <Eye className="w-5 h-5 text-white" />
               </div>
               <h2 className="text-xl font-semibold text-[#114520]">
-                1. Informations We Collect
+                1. Information We Collect
               </h2>
             </div>
             <p className="mb-3 text-gray-700">
