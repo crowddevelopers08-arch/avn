@@ -61,7 +61,7 @@ const AvnFooter: React.FC = () => {
 
     {/* Book Now Button */}
     <a 
-      href="https://avnarogya.zohobookings.in/#/teleconsultation"
+      href="https://avnarogya.zohobookings.in/lp/#/lp"
       className="flex-1 flex items-center justify-center"
     >
       <button 

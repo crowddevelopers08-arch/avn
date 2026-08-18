@@ -123,7 +123,7 @@ const AvnctaSection = () => {
           {/* Combined CTA and Phone Section */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 lg:gap-6 mb-6 sm:mb-8 lg:mb-10 w-full max-w-2xl mx-auto">
             {/* Button 1 */}
-            <a href="https://avnarogya.zohobookings.in/#/teleconsultation">
+            <a href="https://avnarogya.zohobookings.in/lp/#/lp">
             <button
               className="shiny-button"
             >

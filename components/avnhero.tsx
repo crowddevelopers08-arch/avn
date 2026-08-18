@@ -438,7 +438,7 @@ export function Avnhero() {
 >
   {/* Book Now Button */}
   <a 
-    href="https://avnarogya.zohobookings.in/#/teleconsultation"
+    href="https://avnarogya.zohobookings.in/lp/#/lp"
     className="w-full sm:w-auto flex justify-center"
   >
     <button

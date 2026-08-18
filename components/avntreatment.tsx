@@ -225,7 +225,7 @@ const AvntreatmentPackage: React.FC = () => {
         </div>
 
         <div className="mt-10 max-[470px]:mt-5">
-          <a href="https://avnarogya.zohobookings.in/#/teleconsultation">
+          <a href="https://avnarogya.zohobookings.in/lp/#/lp">
           <button 
             className="shiny-button"
           >

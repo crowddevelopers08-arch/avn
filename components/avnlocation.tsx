@@ -227,7 +227,7 @@ export function AvnLocationFooter() {
                 </div>
 
                 {/* CTA Button */}
-                <a href="https://avnarogya.zohobookings.in/#/teleconsultation">
+                <a href="https://avnarogya.zohobookings.in/lp/#/lp">
                 <Button 
                   className="shiny-button w-full h-[50px] max-[470px]:mt-3 mt-6 cursor-pointer py-6"
                 >

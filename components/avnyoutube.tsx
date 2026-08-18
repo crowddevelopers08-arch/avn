@@ -92,7 +92,7 @@ export default function AvnyoutubePlaylist() {
       </div>
 
       {/* Shiny Button */}
-      <a href="https://avnarogya.zohobookings.in/#/teleconsultation">
+      <a href="https://avnarogya.zohobookings.in/lp/#/lp">
       <button 
         className="shiny-button mt-8"
       >

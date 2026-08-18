@@ -357,7 +357,7 @@ export default function Avnheader() {
 
           {/* Book Consultation Button - Hidden on mobile */}
           <div className="hidden sm:flex flex-shrink-0">
-            <a href="https://avnarogya.zohobookings.in/#/teleconsultation">
+            <a href="https://avnarogya.zohobookings.in/lp/#/lp">
             <button
               className="consultation-button-global"
             >
