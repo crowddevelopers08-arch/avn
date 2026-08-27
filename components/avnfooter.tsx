@@ -38,7 +38,7 @@ const AvnFooter: React.FC = () => {
          
           {/* Black Copyright Bar */}
           <div className="w-full bg-black text-white text-center py-2 text-sm md:text-base font-medium tracking-wide">
-            2025 © All Rights Reserved | AVN Arogya Ayurvedic Hospital
+            2026 © All Rights Reserved | AVN Arogya Ayurvedic Hospital
           </div>
         </div>
 

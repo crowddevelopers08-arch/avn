@@ -1,12 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight, Phone } from "lucide-react";
-import {
-  NSC_BOOKING_URL,
-  NSC_PHONE,
-  NSC_PHONE_DISPLAY,
-} from "./NonSurgicalCareForAvascularNecrosisCtaButton";
+import { ArrowRight } from "lucide-react";
+import { NSC_BOOKING_URL } from "./NonSurgicalCareForAvascularNecrosisCtaButton";
 
 export default function NonSurgicalCareForAvascularNecrosisHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,22 +31,14 @@ export default function NonSurgicalCareForAvascularNecrosisHeader() {
           className="h-10 w-auto min-w-0 shrink object-contain object-left sm:h-14 md:h-16"
         />
 
-        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-          <a
-            href={`tel:${NSC_PHONE}`}
-            className="inline-flex items-center gap-2 rounded-full border border-[#114520]/20 bg-white/70 px-3.5 py-2 text-[12.5px] font-semibold text-[#114520] backdrop-blur-sm transition-colors hover:border-[#114520]/40 hover:bg-white sm:px-5 sm:py-2.5 sm:text-[14px]"
-          >
-            <Phone className="h-[15px] w-[15px]" />
-            <span className="hidden sm:inline">{NSC_PHONE_DISPLAY}</span>
-            <span className="sm:hidden">Call</span>
-          </a>
-
+        <div className="flex shrink-0 items-center">
           <a
             href={NSC_BOOKING_URL}
-            className="nsc-btn group hidden items-center gap-2 rounded-full bg-[#114520] px-5 py-2.5 text-[14px] font-semibold text-white shadow-[0_10px_24px_rgba(17,69,32,0.28)] hover:bg-[#014214] sm:inline-flex"
+            className="nsc-btn group inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-[#114520] px-4 py-2.5 text-[12.5px] font-semibold text-white shadow-[0_10px_24px_rgba(17,69,32,0.28)] hover:bg-[#014214] sm:px-5 sm:text-[14px]"
           >
-            Book at ₹150
-            <ArrowRight className="h-[16px] w-[16px] transition-transform duration-300 group-hover:translate-x-0.5" />
+            <span className="hidden sm:inline">Book Your Consultation</span>
+            <span className="sm:hidden">Book Your Consultation</span>
+            <ArrowRight className="h-[16px] w-[16px] shrink-0 transition-transform duration-300 group-hover:translate-x-0.5" />
           </a>
         </div>
       </div>

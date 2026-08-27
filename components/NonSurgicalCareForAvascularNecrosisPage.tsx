@@ -9,8 +9,11 @@ import NonSurgicalCareForAvascularNecrosisFooter from "@/components/NonSurgicalC
 import NonSurgicalCareForAvascularNecrosisInsurancePartners from "./NonSurgicalCareForAvascularNecrosisInsurancePartners";
 
 export default function NonSurgicalCareForAvascularNecrosisPage() {
+  // No overflow clipping on <main>: it would turn it into a scroll container
+  // and break every `position: sticky` on the page. Sections clip their own
+  // decorative blobs instead.
   return (
-    <main className="min-h-screen w-full overflow-x-hidden bg-[#fffaf4]">
+    <main className="min-h-screen w-full bg-[#fffaf4]">
       <NonSurgicalCareForAvascularNecrosisHeader />
 
       {/* Sections 1 & 2 — positioning, the video, and the ₹150 CTA */}

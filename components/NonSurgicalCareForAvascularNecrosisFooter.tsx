@@ -1,10 +1,7 @@
 "use client";
 
-import { CalendarCheck, Phone } from "lucide-react";
-import {
-  NSC_BOOKING_URL,
-  NSC_PHONE,
-} from "./NonSurgicalCareForAvascularNecrosisCtaButton";
+import { CalendarCheck } from "lucide-react";
+import { NSC_BOOKING_URL } from "./NonSurgicalCareForAvascularNecrosisCtaButton";
 
 export default function NonSurgicalCareForAvascularNecrosisFooter() {
   return (
@@ -32,7 +29,7 @@ export default function NonSurgicalCareForAvascularNecrosisFooter() {
           </a>
 
           <p className="border-t border-white/8 pt-3.5 text-center text-[12px] text-white/35 sm:text-[13px]">
-            2025 © All Rights Reserved | AVN Arogya Ayurvedic Hospital
+            2026 © All Rights Reserved | AVN Arogya Ayurvedic Hospital
           </p>
         </div>
 
@@ -44,18 +41,11 @@ export default function NonSurgicalCareForAvascularNecrosisFooter() {
       <div className="fixed inset-x-0 bottom-0 z-50 flex sm:hidden">
         <div className="flex w-full items-stretch border-t border-black/10 bg-white shadow-[0_-6px_22px_rgba(0,0,0,0.12)]">
           <a
-            href={`tel:${NSC_PHONE}`}
-            className="flex min-h-[62px] flex-1 items-center justify-center gap-2 bg-[#f7efe3] text-[14.5px] font-bold text-[#114520] transition-colors active:bg-[#EBD3C1]"
-          >
-            <Phone className="h-[18px] w-[18px]" />
-            Call Now
-          </a>
-          <a
             href={NSC_BOOKING_URL}
-            className="nsc-btn flex min-h-[62px] flex-[1.35] items-center justify-center gap-2 bg-[#114520] text-[14.5px] font-bold text-white active:bg-[#014214]"
+            className="nsc-btn flex min-h-[62px] w-full items-center justify-center gap-2 bg-[#114520] text-[14.5px] font-bold text-white active:bg-[#014214]"
           >
             <CalendarCheck className="h-[18px] w-[18px]" />
-            Book at ₹150
+            Book Your 1:1 Call at ₹150
           </a>
         </div>
       </div>

@@ -6,10 +6,6 @@ import { cn } from "@/lib/utils";
 /** Booking destination shared by every CTA on this landing page. */
 export const NSC_BOOKING_URL = "https://avnarogya.zohobookings.in/lp/#/lp";
 
-/** Phone line shown in the header / sticky bar. */
-export const NSC_PHONE = "+919500292220";
-export const NSC_PHONE_DISPLAY = "+91 95002 92220";
-
 type CtaVariant = "forest" | "orange" | "cream";
 
 const variantClasses: Record<CtaVariant, string> = {

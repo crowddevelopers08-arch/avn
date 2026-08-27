@@ -51,7 +51,7 @@ export default function NonSurgicalCareForAvascularNecrosisHero() {
             <NscAccent tone="orange">Watch This Video First</NscAccent>
           </p>
 
-          <p className="mt-5 max-w-[720px] text-[14px] leading-[1.8] text-[#2B2B2B]/70 sm:text-[15.5px] md:text-[16.5px]">
+          <p className="mt-5 max-w-[720px] text-[15.5px] font-semibold leading-[1.75] text-[#2B2B2B]/85 sm:text-[17px] md:text-[18.5px]">
             We help people explore non-surgical AVN treatment options, even if
             they have been advised to undergo surgery.
           </p>
