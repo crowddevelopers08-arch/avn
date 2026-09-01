@@ -1,4 +1,5 @@
 import { Outfit } from "next/font/google";
+import AvnLpLeadConversion from "@/components/AvnLpLeadConversion";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -6,5 +7,10 @@ const outfit = Outfit({
 });
 
 export default function AvnLpLayout({ children }: { children: React.ReactNode }) {
-  return <div className={outfit.className}>{children}</div>;
+  return (
+    <div className={outfit.className}>
+      <AvnLpLeadConversion />
+      {children}
+    </div>
+  );
 }
