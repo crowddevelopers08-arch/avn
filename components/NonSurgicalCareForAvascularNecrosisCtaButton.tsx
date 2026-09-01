@@ -4,7 +4,8 @@ import { ArrowRight, Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /** Booking destination shared by every CTA on this landing page. */
-export const NSC_BOOKING_URL = "https://avnarogya.zohobookings.in/lp/#/lp";
+export const NSC_BOOKING_URL =
+  "https://avnarogya.zohobookings.in/paid-consultation-lp";
 
 type CtaVariant = "forest" | "orange" | "cream";
 

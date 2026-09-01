@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Car, MapPin, Navigation, Phone, X } from "lucide-react";
 import { FaWalking } from "react-icons/fa";
 import { AvnconsultationModal } from "./avnpopupform";
+import { NSC_BOOKING_URL } from "./NonSurgicalCareForAvascularNecrosisCtaButton";
 
 export default function NonSurgicalCareForAvascularNecrosisLocationFooter() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -203,7 +204,7 @@ export default function NonSurgicalCareForAvascularNecrosisLocationFooter() {
                   </div>
                 </div>
 
-                <a href="https://avnarogya.zohobookings.in/lp/#/lp">
+                <a href={NSC_BOOKING_URL}>
                   <Button className="shiny-button mt-6 h-[50px] w-full cursor-pointer py-6 max-[470px]:mt-3">
                     Book Your Appointment Today
                   </Button>

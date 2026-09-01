@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { HipconsultationModal } from "./Hippopup";
 import { withImageKit } from "@/lib/imagekit";
+import { NSC_BOOKING_URL } from "./NonSurgicalCareForAvascularNecrosisCtaButton";
 
 const items = [
   {
@@ -137,7 +138,7 @@ export default function NonSurgicalCareForAvascularNecrosisTreatmentPackage() {
         </div>
 
         <div className="mt-10 max-[470px]:mt-5">
-          <a href="https://avnarogya.zohobookings.in/lp/#/lp">
+          <a href={NSC_BOOKING_URL}>
             <button className="shiny-button">Book Your Teleconsultation Today</button>
           </a>
         </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { HipconsultationModal } from "./Hippopup";
+import { NSC_BOOKING_URL } from "./NonSurgicalCareForAvascularNecrosisCtaButton";
 
 const videos = [
   {
@@ -75,7 +76,7 @@ export default function NonSurgicalCareForAvascularNecrosisYoutube() {
         </div>
       </div>
 
-      <a href="https://avnarogya.zohobookings.in/lp/#/lp">
+      <a href={NSC_BOOKING_URL}>
         <button className="shiny-button mt-8">Book Your Teleconsultation Today</button>
       </a>
 
