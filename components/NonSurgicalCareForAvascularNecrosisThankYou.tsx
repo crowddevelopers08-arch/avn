@@ -28,9 +28,9 @@ const NSC_LANDING_PAGE = "/non-surgical-care-for-avascular-necrosis";
 
 /**
  * Google Ads conversion for the non-surgical AVN landing page.
- * Currently the shared AVN label — swap for this LP's own label when it exists.
+ * Event snippet: Purchase - AVN Paid LP conversion page
  */
-const NSC_CONVERSION_SEND_TO = "AW-947598506/BktGCIXx7MIbEKrp7MMD";
+const NSC_CONVERSION_SEND_TO = "AW-947598506/8EbnCOjN5vIcEKrp7MMD";
 
 const steps = [
   {
@@ -67,7 +67,11 @@ export default function NonSurgicalCareForAvascularNecrosisThankYou() {
   // Google Ads conversion — fires once, when the visitor lands here after booking.
   useEffect(() => {
     if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "conversion", { send_to: NSC_CONVERSION_SEND_TO });
+      window.gtag("event", "conversion", {
+        send_to: NSC_CONVERSION_SEND_TO,
+        transaction_id: "",
+        // new_customer: true, /* calculate dynamically, populate with true/false */
+      });
     }
   }, []);
 
