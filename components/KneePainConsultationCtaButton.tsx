@@ -3,13 +3,8 @@
 import { ArrowRight, Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-/**
- * Booking destination shared by every CTA on the knee pain landing page.
- * Currently the same Zoho paid-consultation page as the AVN LP — swap it here
- * if knee pain gets its own booking page.
- */
-export const KPC_BOOKING_URL =
-  "https://avnarogya.zohobookings.in/paid-consultation-lp";
+/** Booking destination shared by every CTA on the knee pain landing page. */
+export const KPC_BOOKING_URL = "https://avnarogya.zohobookings.in/knee-pain";
 
 type CtaVariant = "forest" | "orange" | "cream";
 

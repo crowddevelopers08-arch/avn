@@ -3,13 +3,9 @@
 import { ArrowRight, Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-/**
- * Booking destination shared by every CTA on the back pain & sciatica landing
- * page. Currently the same Zoho paid-consultation page as the AVN LP — swap it
- * here if back pain gets its own booking page.
- */
+/** Booking destination shared by every CTA on the back pain & sciatica landing page. */
 export const BPS_BOOKING_URL =
-  "https://avnarogya.zohobookings.in/paid-consultation-lp";
+  "https://avnarogya.zohobookings.in/back-pain-sciatica";
 
 type CtaVariant = "forest" | "orange" | "cream";
 
